@@ -12,7 +12,7 @@ export function BigCalendar({ tasks, toggleTask, showCompleted = false }) {
   let data = "[";
 
   for(let i = 0; i < tasks.length; i++){
-    if(!tasks[i].finalizado){
+    if(!tasks[i].done){
       data += '{ "id": "' + tasks[i].idTask + '", "title": "' + tasks[i].name + '", "start": "' + tasks[i].dateTask + '", "end": "' + tasks[i].dateTask + '" },'
     }
   }
