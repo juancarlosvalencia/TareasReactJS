@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Gestion de tareas React js
 
 Este proyecto fue diseñado y creado por Juan Carlos Valencia 
 
