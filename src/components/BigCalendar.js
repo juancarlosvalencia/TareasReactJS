@@ -30,6 +30,14 @@ export function BigCalendar({ tasks, toggleTask, showCompleted = false }) {
     events: [],
   }, plugins);
 
+  const ElementosActivos = calendar.eventsService.getAll();
+
+  if(ElementosActivos !== null || ElementosActivos !== 'undefined'){
+    for(let i = 0; i < ElementosActivos.length; i++){
+      calendar.eventsService.remove(ElementosActivos[i].id);
+    }
+  }
+
   if(data.length >2){
     for(let i = 0; i < resultados.length; i++){
       if(!calendar.eventsService.get(resultados[i].id)){
