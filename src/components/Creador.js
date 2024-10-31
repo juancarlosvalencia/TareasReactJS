@@ -7,11 +7,12 @@ import { FaCalendarDays } from "react-icons/fa6";
 import { FaFileLines } from "react-icons/fa6";
 import { registerLocale } from  "react-datepicker";
 import { es } from 'date-fns/locale/es';
+import Moment from 'moment';
 registerLocale('es', es)
 
 
 export const TaskCreator = ({ createNewTask }) => {
-  
+  Moment.locale('en');
   const [newTaskName, setNewTaskName] = useState("");
   const [newTaskDescription, setNewTaskDescription] = useState("");
   const [startDate, setStartDate] = useState(new Date());
@@ -32,7 +33,7 @@ export const TaskCreator = ({ createNewTask }) => {
     }
 
     e.preventDefault();
-    createNewTask(newTaskName, newTaskDescription, startDate.getFullYear() + "-"+ parseInt(startDate.getMonth()+1) +"-"+ startDate.getDate());
+    createNewTask(newTaskName, newTaskDescription, Moment(startDate).format('YYYY-MM-DD'));
     setNewTaskName("");
     setNewTaskDescription("");
     setStartDate(new Date());

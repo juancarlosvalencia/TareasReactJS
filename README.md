@@ -14,6 +14,7 @@ para iniciar el proyecto se debe contar con los siguientes requisitos:
 - @fortawesome/fontawesome-svg-core
 - @fortawesome/free-solid-svg-icons
 - @fortawesome/react-fontawesome
+- moment react-moment
 - bootstrap 
 
 ### Como consideración adicional se debe ejecutar el siguiente comando en windows para que permita la ejecucion de los scripts desde visual studio code
